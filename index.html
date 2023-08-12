@@ -2,61 +2,54 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
-	<title>Cheap Motion Pictures Film Movie Production Company Inc</title>
+	<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+	<link rel="stylesheet" href="/css.css">
+	<title>Cheap Motion Picture Film Movie Production Company Inc</title>
 </head>
 <body>
-<style>
-@font-face {
-  font-family: RifficFree-Bold;
-  src: url(RifficFree-Bold.ttf);
-}
-body, html {
-	margin:0;
-	padding:0;
-	display:grid;
-	font-family: "RifficFree-Bold";
-	justify-items: center;
-	place-content: center;
-}
-html {
-	min-height:100%;
-	background: black;
-	/* background-image: linear-gradient(
-		black,
-		rgb(0,10,20)
-	);*/
-	/* background-image: linear-gradient(
-		white,
-		rgb(0,10,20)
-	);*/
-	color: white;
-	color: rgb(200,230,255);
-}
-body {gap:1em;}
-a:link    {color: rgb(0,150,230);text-decoration:none}
-a:visited {color: rgb(0,150,230);}
-a:hover   {color: rgb(200,230,255);}
-a:active  {color: rgb(200,230,255);}
-* {transition: all 0.2s;}
-</style>
-<video id="logo" style="width:100%" muted autoplay><source src="cheapmo.mp4" type="video/mp4"></video>
+<header>
+	<link-container>
+		<a class="mega" href="/">HOME</a>
+		<a class="mega" href="/join">JOIN</a>
+		<a class="mega" href="/about">ABOUT</a>
+	</link-container>
+</header>
+<main>
+	<content-page>
+		<video id="logo" style="width:100%;max-height:90vh;max-width:100vw;" muted autoplay><source src="/data/cheapmo.mp4" type="video/mp4"></video>
+		<link-container>
+			<a class="mega" target="_blank" style="--freq:1.0" href="https://youtube.com/@CheapMotionPictures"    ><img alt="youtube"     src="/data/icon-youtube.png"></a>
+			<a class="mega" target="_blank" style="--freq:1.1" href="https://instagram.com/CheapMotionPictures"   ><img alt="instagram"   src="/data/icon-instagram.png"></a>
+			<!-- <a class="mega" target="_blank" style="--freq:1.0" href="https://twitter.com/CheapMotionPic"          ><img alt="twitter"     src="/data/icon-twitter.png"></a> -->
+			<!-- <a class="mega" target="_blank" style="--freq:1.1" href="https://facebook.com/CheapMotionPictures"    ><img alt="facebook"    src="/data/icon-facebook.png"></a> -->
+			<!-- <a class="mega" target="_blank" style="--freq:1.0" href="https://vimeo.com/CheapMotionPictures"       ><img alt="vimeo"       src="/data/icon-vimeo.png"></a> -->
+			<!-- <a class="mega" target="_blank" style="--freq:1.1" href="https://dailymotion.com/CheapMotionPictures" ><img alt="dailymotion" src="/data/icon-dailymotion.png"></a> -->
+			<!-- <a class="mega" target="_blank" style="--freq:1.0" href="https://tiktok.com/@CheapMotionPictures"     ><img alt="tiktok"      src="/data/icon-tiktok.png"></a> -->
+		</link-container>
+	</content-page>
+</main>
 <script>
 let v = document.getElementById("logo")
+v.style.cursor=`url('/data/cursor_mute.png') 32 32, auto`
 v.addEventListener("click",e=>{
-	v.play()
-	v.muted=false
+	if(!v.paused) {
+		v.style.cursor=`url('${v.muted?'/data/cursor_sound.png':'/data/cursor_mute.png'}') 32 32, auto`
+		v.muted=!v.muted
+	}
 })
+v.addEventListener("ended",e=>{v.style.cursor= ``})
+// let v = document.getElementById("logo")
+// v.style.cursor= `url('/data/cursor_sound.png') 32 32, auto`
+// v.addEventListener("click",e=>{
+// 	v.play()
+// 	v.style.cursor= `url('${v.muted?'/data/cursor_sound.png':'/data/cursor_mute.png'}') 32 32, auto`
+// 	v.muted=!v.muted
+// })
+// v.addEventListener("ended",e=>{
+// 	v.style.cursor= `url('/data/cursor_play.png') 32 32, auto`
+// 	v.muted=true // onclick will flip that
+// })
 </script>
-<div style="display:flex;gap:2em;">
-	<a href="https://youtube.com/@CheapMotionPictures">youtube</a>
-	<a href="https://instagram.com/CheapMotionPictures">instagram</a>
-<!--	<a href="https://facebook.com/CheapMotionPictures">facebook</a>-->
-	<a href="https://tiktok.com/@CheapMotionPictures">tiktok</a>
-<!--	<a href="https://twitter.com/CheapMotionPic">twitter</a>-->
-<!--	<a href="https://vimeo.com/CheapMotionPictures">vimeo</a> -->
-<!--	<a href="https://dailymotion.com/CheapMotionPictures">dailymotion</a>-->
-</div>
-<p>Cheap Motion Picture Film Movie Production Company Inc</p>
+<footer><p>cheap motion picture film movie production company inc | 2022 - 2023</p></footer>
+</body>
 </html>
-

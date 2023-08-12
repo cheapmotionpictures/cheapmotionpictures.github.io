@@ -1,0 +1,76 @@
+/* === GLOBAL SUFF === */
+@font-face {font-family:handwritten;src:url('/data/LargeFont.ttf');}
+/*@font-face {font-family:handwritten_thin;src:url('/data/ThinFont.ttf');}*/
+/*@font-face {font-family:cartoon;src:url('/data/RifficFree-Bold.ttf');}*/
+
+::-webkit-scrollbar {width:10px;}
+::-webkit-scrollbar-track {background:black;}
+::-webkit-scrollbar-thumb {background:#ccc;}
+::-webkit-scrollbar-thumb:hover {background:#fff;}
+::selection {color:black;background:white;}
+
+/* === RESET SUFF === */
+body, html {
+	margin:0;
+	padding:0;
+	min-height:100vh;
+	max-width:100vw;
+}
+html {
+	font-family: "handwritten";
+	font-size:1.2em;
+	background:black;
+/*	background:rgb(5,15,20);*/
+	color: white;
+}
+
+/* === LAYOUT SUFF === */
+main, body, content-page, gr-id {
+	display:grid;
+	justify-items:center;
+	place-content:center;
+}
+/*body should only contain <header>, <main>, <footer> */
+body {grid-template-rows:max-content 1fr max-content;}
+
+content-page {min-height:80vh;}
+
+text-col {
+	display:block;
+	max-width:35em;
+}
+
+link-container {
+	display:flex;
+	gap:2em;
+	margin:1em;
+	font-size:1.3em;
+}
+link-container img {display:block;height:64px;}
+
+/* === LOOK SUFF === */
+/*body { cursor: url('/data/cursor.png') 32 32, auto; }*/
+/*p { cursor: url('/data/cursor_text.png') 32 32, auto !important; }*/
+
+/*a:link,a:visited,a:hover,a:active{color: rgb(200,230,255);text-decoration:none;}*/
+a:link,a:visited,a:hover,a:active{color:white;text-decoration:none;}
+a:hover{cursor:url('/data/cursor_finger.png') 18 7, auto;}
+
+a{display:inline-block;}
+
+a:link      {animation: shakemini calc(.2s * var(--freq)) infinite;}
+a.mega:link {animation: shake calc(.2s * var(--freq)) infinite;}
+a.mega:hover{animation: jump  .2s infinite;z-index:100;}
+@keyframes shake {
+	0%,100% { transform: rotate(-3deg) translateY(0px) scale(1);}
+	50% {     transform: rotate( 3deg) translateY(0px) scale(1);}
+}
+@keyframes shakemini {
+	0%,100% { transform: rotate(-2deg) translateY(0px) scale(1);}
+	50% {     transform: rotate( 2deg) translateY(0px) scale(1);}
+}
+@keyframes jump {
+	0%,100% { transform: rotate( 0deg) translateY( 5px) scale(2);}
+	50% {     transform: rotate( 0deg) translateY(-5px) scale(2);}
+}
+/** {transition: all 0.2s;}*/
