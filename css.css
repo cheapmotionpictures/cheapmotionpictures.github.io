@@ -32,8 +32,10 @@ main, body, content-page, gr-id {
 }
 /*body should only contain <header>, <main>, <footer> */
 body {grid-template-rows:max-content 1fr max-content;}
-
+footer {text-align:center;}
 content-page {min-height:80vh;}
+
+footer, text-col {padding:0 20px;}
 
 text-col {
 	display:block;
