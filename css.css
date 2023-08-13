@@ -17,7 +17,7 @@ body, html {
 	max-width:100vw;
 }
 html {
-	font-family: "handwritten";
+	font-family: "handwritten", arial;
 	font-size:1.2em;
 	background:black;
 /*	background:rgb(5,15,20);*/
