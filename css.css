@@ -36,6 +36,7 @@ footer {text-align:center;}
 content-page {min-height:80vh;}
 
 footer, text-col {padding:0 20px;}
+footer {font-size:min( 1em, 4vw);}
 
 text-col {
 	display:block;
@@ -44,11 +45,12 @@ text-col {
 
 link-container {
 	display:flex;
-	gap:2em;
+	gap:1.5em;
 	margin:1em;
-	font-size:1.3em;
+	font-size:min( 1.3em, 5vw);
 }
-link-container img {display:block;height:64px;}
+link-container img {display:block;height:min(64px, 20vw);}
+
 
 /* === LOOK SUFF === */
 /*body { cursor: url('/data/cursor.png') 32 32, auto; }*/
