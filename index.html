@@ -40,10 +40,11 @@ let v = document.getElementById("demoreel")
 function update_cursor(paused) { v.style.cursor= `url('${paused?'/data/cursor_play.png':'/data/cursor_pause.png'}') 32 32, auto` }
 v.style.cursor=`url('/data/cursor_sound.png') 32 32, auto`
 let first_time=true
-v.addEventListener("click",e=>{
+let callback = e=>{
 	if(first_time) {
 		e.preventDefault()
 		v.muted=false
+		setTimeout(e=>v.play(),150) // unmute force pose :¬\ aaaargh
 		first_time=false
 		update_cursor(v.paused) // need this because of e.preventDefault(), and the fact
 		                        // that this event is registered before the player state changes
@@ -51,8 +52,10 @@ v.addEventListener("click",e=>{
 	} else {
 		update_cursor(!v.paused)
 	}
-})
-v.addEventListener('ended', e=>v.load())
+}
+v.addEventListener("click",callback)
+v.addEventListener("touchstart",callback)
+// v.addEventListener('ended', e=>v.load())
 </script>
 <footer><p>cheap motion picture film movie production company inc | 2022 - 2023</p></footer>
 </body>
