@@ -16,29 +16,26 @@
 	</link-container>
 </header>
 <main>
-<!-- <content-page style="padding: 5em 0"> -->
+	<video id="logo" style="width:100%;max-height:60vh;max-width:100vw;border-radius:1em;" muted autoplay poster="/data/cheapmo-poster.png"><source src="/data/cheapmo.mp4" type="video/mp4"></video>
 	<text-col>
 <!-- 		<h1>What is this all about ?</h1>
 		<p>We are a bunch of people making animation from Switzerland. We are working on short films and our current project is to make very short clips every two weeks as an exercice.</p>
 		<p>We are open to experimentation, our team counts artists and engineers.</p>
 		<p>Here is a collection of some shots we have done so far.</p>
  -->
-		<!-- <h1>Qui sommes nous ?</h1> -->
 		<p>Nous sommes un groupe d'animateurs basé en Suisse. Nous produisons des courts métrages et notre projet du moment consiste à réaliser des micro-animations toutes les deux semaines en guise d'exercice.</p>
 		<p>Ouverte à l'expérimentation, notre équipe compte artistes et ingénieurs.</p>
-		<!-- <p>Voyez ces quelques extraits de nos productions.</p> -->
 	</text-col>
-	<video id="demoreel" style="width:100%;max-height:70vh;max-width:100vw;" controls poster="/data/bande-demo-2023-light.jpg"><source src="/data/bande-demo-2023-light.mp4" type="video/mp4"></video>
-	<text-col>
-		<!-- <p>There is more to come.</p> -->
-	</text-col>
-<!-- </content-page> -->
 <script>
-let v = document.getElementById("demoreel")
-function update_cursor(flip=false) { v.style.cursor= `url('${(flip?!v.paused:v.paused)?'/data/cursor_play.png':'/data/cursor_pause.png'}') 32 32, auto` }
-v.addEventListener("click", e=>update_cursor(true))
-v.addEventListener("ended", e=>update_cursor())
-update_cursor()
+// let v = document.getElementById("logo")
+// v.style.cursor=`url('/data/cursor_mute.png') 32 32, auto`
+// v.addEventListener("click",e=>{
+// 	if(!v.paused) {
+// 		v.style.cursor=`url('${v.muted?'/data/cursor_sound.png':'/data/cursor_mute.png'}') 32 32, auto`
+// 		v.muted=!v.muted
+// 	}
+// })
+// v.addEventListener("ended",e=>{v.style.cursor= ``})
 </script>
 </main>
 <footer><p>cheap motion picture film movie production company inc | 2022 - 2023</p></footer>
